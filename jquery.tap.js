@@ -63,8 +63,8 @@
             // Coordinates, when event ends, should be the same as they were
             // on start.
             (
-              eventData.pageX === eventData.event.pageX &&
-              eventData.pageY === eventData.event.pageY
+              Math.abs(eventData.pageX - eventData.event.pageX) < 7 &&
+              Math.abs(eventData.pageY - eventData.event.pageY) < 7
             )
           ) {
             event.type = specialEventName;
